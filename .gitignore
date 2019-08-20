@@ -1,0 +1,8 @@
+.pio
+.pioenvs
+.piolibdeps
+.vscode
+.*
+!.gitignore
+platformio.ini
+include/config.h
