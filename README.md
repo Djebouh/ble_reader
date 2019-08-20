@@ -20,20 +20,17 @@ It is inspired from [sidddy's project](https://github.com/sidddy/flora).
 ## Setup instructions
 
 1) clone the project
-
 2) In the include folder, copy config.clean.h into **config.h** and update settings according to your MQTT server
-
 3) In the root folder, copy platformio.clean.ini into **platformio.ini** and settings according to your WIFI SSID and password
-
 4) Compile & upload on your ISP32 
 
 ## High Level execution details
 
-1> BLE Scan to list all devices in range and publishing ServiceUUID 0xfe95 (Mi Flora) or 39e1f900-84a8-11e2-afba-0002a5d5c51b (Parrot)
-2> If devices are found, connect to Wifi and MQTT Server (a first event is logged in the topic ESP)
-3> Connect to each device found in (1) and extract the plant conditions (and the battery of the sensor). Once the data is read for a given sensor, it is reported to the MQTT server (topics are MiFlora or ParrotPot)
-4> Close Wifi and MQTT connections
-5> Sleep for SLEEP_DURATION and then restart from (1)
+1) BLE Scan to list all devices in range and publishing ServiceUUID 0xfe95 (Mi Flora) or 39e1f900-84a8-11e2-afba-0002a5d5c51b (Parrot)
+2) If devices are found, connect to Wifi and MQTT Server (a first event is logged in the topic ESP)
+3) Connect to each device found in (1) and extract the plant conditions (and the battery of the sensor). Once the data is read for a given sensor, it is reported to the MQTT server (topics are MiFlora or ParrotPot)
+4) Close Wifi and MQTT connections
+5) Sleep for SLEEP_DURATION and then restart from (1)
 
 Each step has a max duration, configured as below.
 
