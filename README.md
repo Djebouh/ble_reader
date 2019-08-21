@@ -1,4 +1,4 @@
-## ble_reader
+# plant_reader
 
 This PlatformIO ESP32 project implements:
 - a BLE client that polls **_Xiaomi_ MiFlora** and **_Parrot_ Pot** plant sensors
